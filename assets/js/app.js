@@ -19,8 +19,16 @@ var displayData = (function(data, key, where) {
   var arr = [];
   for (var i = 0; i < data.length; i++) {
     var item = data[i][key];
-    if (arr.indexOf(item) == -1) {
-      arr.push(item);
+    if (typeof item === "string") {
+      if (arr.indexOf(item) === -1) {
+        arr.push(item);
+      }
+    } else if (Array.isArray(item)) {
+      for (var n = 0; n < item.length; n++) {
+        if (arr.indexOf(item[n]) === -1) {
+          arr.push(item[n]);
+        }
+      }
     }
   }
   for (var x = 0; x < arr.length; x++) {

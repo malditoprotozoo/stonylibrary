@@ -22,5 +22,7 @@ body {
 }
 
 small {
+  font-size: 0.4em;
   text-transform: uppercase;
+  color: #9FB4A5;
 }

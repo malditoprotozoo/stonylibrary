@@ -1,4 +1,4 @@
-var data = [
+var fanfics = [
   {
     title: "You Can't Control a Ripple",
     link: "http://archiveofourown.org/works/10630803",

@@ -1,7 +1,26 @@
 body {
   background-color: #33262D;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .navbar-brand {
   font-family: "Marcellus SC", serif;
+}
+
+#sidebar {
+  background-color: #fff;
+  padding-top: 1em;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: #B76782;
+}
+
+.list-group-item {
+  border: none;
+}
+
+small {
+  text-transform: uppercase;
 }

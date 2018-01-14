@@ -1,5 +1,8 @@
 $(document).ready(function() {
   firebase.initializeApp(config);
+  displayData(fanfics, "language", $("#select-lang"));
+  displayData(fanfics, "rating", $("#select-rating"));
+  displayData(fanfics, "universe", $("#select-universe"));
 });
 
 // Initialize Firebase
@@ -12,6 +15,18 @@ var config = {
   messagingSenderId: "341435881879"
 };
 
+var displayData = (function(data, key, where) {
+  var arr = [];
+  for (var i = 0; i < data.length; i++) {
+    var item = data[i][key];
+    if (arr.indexOf(item) == -1) {
+      arr.push(item);
+    }
+  }
+  for (var x = 0; x < arr.length; x++) {
+    $(where).append(`<p>` + arr[x] + `</p>`);
+  }
+});
 // var addFic = (function() {
 //   var btnSend = $("#send-data");
 //   $(btnSend).click(function() {

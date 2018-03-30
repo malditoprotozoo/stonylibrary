@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LanguageSelector from './LanguageSelector';
+import UniverseSelector from './UniverseSelector';
 import './index.css';
 // import { Link } from 'react-router-dom';
 
@@ -40,6 +41,7 @@ class Sidebar extends Component {
           this.state.fics !== null ?
             <div className="panel-group">
               <LanguageSelector/>
+              <UniverseSelector/>
             </div>
           : <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
       }

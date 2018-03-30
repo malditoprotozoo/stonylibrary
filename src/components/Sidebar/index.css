@@ -1,3 +1,10 @@
+/* Panel's Style */
+.panel-body {
+  text-transform: lowercase;
+}
+
+
+/* Spiner, modified version of this one: https://loading.io/css/ */
 .lds-ellipsis {
   display: inline-block;
   position: relative;

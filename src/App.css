@@ -1,3 +1,29 @@
+.card-columns {
+  column-count: 3!important;
+}
+
 .title {
   font-family: "Marcellus SC", serif;
+}
+
+.large-loader {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .card-columns {
+    column-count: 2!important;
+  }
+}
+
+@media (max-width: 560px) {
+  .card-columns {
+    column-count: 1!important;
+  }
 }

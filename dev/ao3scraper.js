@@ -58,7 +58,7 @@ const getData = ids => {
 
   Promise.all(promises).then((results) => {
     console.log("Results > "+JSON.stringify(results, null, 2));
-    fs.writeFileSync(`src/data/fics.json`, JSON.stringify(results, null, 2));
+    fs.writeFileSync(`public/data/ao3.json`, JSON.stringify(results, null, 2));
   }).catch((error) => {
 
   });

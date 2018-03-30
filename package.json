@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "scrap": "node dev/scraper.js"
+    "ao3": "node dev/ao3scraper.js"
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",

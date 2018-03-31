@@ -50,7 +50,7 @@ class SelectedFics extends Component {
                       <h5 className="card-title">{fic.title}</h5>
                       <p className="card-text"><span className="description">Summary: </span>{fic.summary}</p>
                       <p className="card-text"><span className="description">Rating: </span>{fic.rating}</p>
-                      <center> Author: {' '}
+                      <p className="card-text"><span className="description">Author: </span>
                       {
                         fic.authors.map((author, i) => {
                           return (
@@ -58,7 +58,7 @@ class SelectedFics extends Component {
                           );
                         })
                       }
-                      </center>
+                      </p>
                     </div>
                     <div className="card-footer">
                       <a target="_blank" href={'https://archiveofourown.org/works/' + fic.id} className="btn btn-primary">Link</a>

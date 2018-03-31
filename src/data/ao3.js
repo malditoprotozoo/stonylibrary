@@ -33,7 +33,8 @@ const ao3Fics = [
     "universe": "616",
     "language": "English",
     "tags": [
-      "Canon Divergence"
+      "Canon Divergence",
+      "Hurt/Comfort"
     ],
     "words": "46474"
   },
@@ -53,7 +54,8 @@ const ao3Fics = [
     "universe": "616",
     "language": "English",
     "tags": [
-      "Fix-It"
+      "Fix-It",
+      "Hurt/Comfort"
     ],
     "words": "90429"
   },
@@ -107,7 +109,8 @@ const ao3Fics = [
     "universe": "MCU",
     "language": "English",
     "tags": [
-      "Identity Porn"
+      "Identity Porn",
+      "Pining"
     ],
     "words": "18876"
   },
@@ -126,7 +129,10 @@ const ao3Fics = [
     "language": "English",
     "tags": [
       "Angst",
-      "Fix-It"
+      "Fix-It",
+      "Hurt/Comfort",
+      "Pining",
+      "Misunderstandings"
     ],
     "words": "36978"
   },
@@ -163,9 +169,11 @@ const ao3Fics = [
       "https://archiveofourown.org/users/Closer/pseuds/Closer"
     ],
     "summary": "Eighteen-year-old Tony Stark is the boy genius who woke Captain America, and now he's stuck with him. That's not a bad thing, but between Steve's wide-eyed wonder at the new world and Tony's little fanboy crush, the awkwardness just keeps happening.",
-    "universe": "Iron Man: Armored Adventures",
+    "universe": "Armored Adventures",
     "language": "English",
-    "tags": [],
+    "tags": [
+      "Crossover/Fusion"
+    ],
     "words": "36,271"
   },
   {
@@ -188,6 +196,127 @@ const ao3Fics = [
       "Dirty Talk"
     ],
     "words": "130,631"
+  },
+  {
+    "id": "4861586",
+    "title": "Star-Spangled Butt",
+    "rating": "Explicit",
+    "authors": [
+      "Amuly"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/Amuly/pseuds/Amuly"
+    ],
+    "summary": "Tony and Steve are sharing a room in the old MacBarton farm. Which would be fine, except Tony forgot that he was wearing a particularly inspirational pair of underwear this morning (patriotically inspiring underwear).",
+    "universe": "MCU",
+    "language": "English",
+    "tags": [
+      "Friends With Benefits",
+      "Farmhouse of Love"
+    ],
+    "words": "1077"
+  },
+  {
+    "id": "6893602",
+    "title": "These Dotted Lines",
+    "rating": "Mature",
+    "authors": [
+      "YohKoBennington"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/YohKoBennington/pseuds/YohKoBennington"
+    ],
+    "summary": "Steve and Tony get trapped underground after been attacked during a mission. In there, battered and without communication with the rest of the team, they have to find a way out. Between fighting new enemies and almost dying, feelings they were keeping from each other come afloat and their lives are changed forever.",
+    "universe": "616",
+    "language": "English",
+    "tags": [
+      "Getting Together",
+      "Angst",
+      "Action/Adventure",
+      "Hurt/Comfort",
+      "Pining"
+    ],
+    "words": "9,927"
+  },
+  {
+    "id": "6893602",
+    "title": "These Dotted Lines",
+    "rating": "Mature",
+    "authors": [
+      "YohKoBennington"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/YohKoBennington/pseuds/YohKoBennington"
+    ],
+    "summary": "Steve and Tony get trapped underground after been attacked during a mission. In there, battered and without communication with the rest of the team, they have to find a way out. Between fighting new enemies and almost dying, feelings they were keeping from each other come afloat and their lives are changed forever.",
+    "universe": "616",
+    "language": "English",
+    "tags": [
+      "Getting Together",
+      "Angst",
+      "Action/Adventure",
+      "Hurt/Comfort",
+      "Pining"
+    ],
+    "words": "9,927"
+  },
+  {
+    "id": "517893",
+    "title": "A hard rain is gonna fall",
+    "rating": "Not Rated",
+    "authors": [
+      "mullu"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/mullu/pseuds/mullu"
+    ],
+    "summary": "En 1965, miles de jóvenes estadounidenses partieron a tierras lejanas a \"luchar por la libertad\" y el Capitán América despertó tras 23 años en el hielo. Vietnam es verde y húmedo y confuso, y en la universidad de Tony (Howard tiene un hijo de la edad de Bucky, por dios) la gente marcha para protestar contra cosas que a Steve nunca se le ocurrió cuestionarse. Una historia de héroes que son villanos, de guerras que se convierten en su propio enemigo, de rock 'n roll y rebeldes con causa, de la búsqueda de uno mismo y de una generación que pasa de la ignorancia al desencanto, del desencanto a la indignación y de la indignación a la esperanza.",
+    "universe": "",
+    "language": "Español",
+    "tags": [],
+    "words": "39,107"
+  },
+  {
+    "id": "3069353",
+    "title": "Roll the Dice and Swear Your Love (for me)",
+    "rating": "Explicit",
+    "authors": [
+      "fandomfrolics"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/fandomfrolics/pseuds/fandomfrolics"
+    ],
+    "summary": "After all, how bad could a game of Truth or Dare be?",
+    "universe": "616",
+    "language": "English",
+    "tags": [
+      "First Kiss",
+      "Pining",
+      "Misunderstandings"
+    ],
+    "words": "3851"
+  },
+  {
+    "id": "12694110",
+    "title": "Blank Slate - A Tony Stark Mystery",
+    "rating": "Teen And Up Audiences",
+    "authors": [
+      "navaan"
+    ],
+    "authorsLinks": [
+      "https://archiveofourown.org/users/navaan/pseuds/navaan"
+    ],
+    "summary": "He doesn’t remember who he is or who his friends are, but he knows he’s in a Nazi prison and needs to get away. He doesn’t remember anything about Captain America either, but the man seems to be the kind of guy you trust.And apparently they share more history than meets the eye at first glance.",
+    "universe": "",
+    "language": "English",
+    "tags": [
+      "First Kiss",
+      "Getting Together",
+      "Angst",
+      "Action/Adventure",
+      "Hurt/Comfort"
+    ],
+    "words": "25378"
   }
 ]
 

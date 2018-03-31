@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const firstArr = ['13521117', '855031', '455066', '562493', '726803', '12976434', '13446870', '306021'];
-const secArr = ['399804', '860801'];
+const secArr = ['399804', '860801', '4861586', '6893602', '6893602', '517893', '3069353', '12694110'];
 const ids = firstArr.concat(secArr);
 
 const getData = ids => {
@@ -46,14 +46,22 @@ const getData = ids => {
             let info = $('div.wrapper').eq(2).text().trim().toLocaleLowerCase();
             if (info.includes('college')) {
               obj.universe = 'College AU';
+            } else if (info.includes('high school')) {
+              obj.universe = 'High School AU';
             } else if (info.includes('616')) {
               obj.universe = '616';
+            } else if (info.includes('Noir')) {
+              obj.universe = 'Marvel Noir';
             } else if (info.includes('movies') || info.includes('cinematic')) {
               obj.universe = 'MCU';
             } else if (info.includes('teachers')) {
               obj.universe = 'Teachers AU';
             } else if (info.includes('armored adventures')) {
-              obj.universe = 'Iron Man: Armored Adventures';
+              obj.universe = 'Armored Adventures';
+            } else if (info.includes('ultimates')) {
+              obj.universe = 'Ultimate';
+            } else if (info.includes('universe - vietnam')) {
+              obj.universe = 'Vietnam AU';
             }
             if (info.includes('sex pollen')) {
               obj.tags.push('Sex Pollen');
@@ -91,6 +99,33 @@ const getData = ids => {
             if (info.includes('fix-it') || info.includes('fix it')) {
               obj.tags.push('Fix-It');
             }
+            if (info.includes('friends with benefits')) {
+              obj.tags.push('Friends With Benefits');
+            }
+            if (info.includes('farmhouse of love')) {
+              obj.tags.push('Farmhouse of Love');
+            }
+            if (info.includes('action') || info.includes('adventure')) {
+              obj.tags.push('Action/Adventure');
+            }
+            if (info.includes('hurt/comfort')) {
+              obj.tags.push('Hurt/Comfort');
+            }
+            if (info.includes('christmas')) {
+              obj.tags.push('Christmas');
+            }
+            if (info.includes('crossover') || info.includes('fusion')) {
+              obj.tags.push('Crossover/Fusion');
+            }
+            if (info.includes('pining')) {
+              obj.tags.push('Pining');
+            }
+            if (info.includes('misunderstandings')) {
+              obj.tags.push('Misunderstandings');
+            }
+            if (info.includes('fake relationship') || info.includes('fake date') || info.includes('pretended relationship')) {
+              obj.tags.push('Pretended Relationship');
+            }
             obj.language = $('.language').eq(1).text().trim();
             obj.words = $('.words').eq(1).text();
           });
@@ -115,14 +150,22 @@ const getData = ids => {
             let info = $('.fandoms').eq(0).text().trim().toLowerCase();
             if (info.includes('college')) {
               obj.universe = 'College AU';
+            } else if (info.includes('high school')) {
+              obj.universe = 'High School AU';
             } else if (info.includes('616')) {
               obj.universe = '616';
+            } else if (info.includes('Noir')) {
+              obj.universe = 'Marvel Noir';
             } else if (info.includes('movies') || info.includes('cinematic')) {
               obj.universe = 'MCU';
             } else if (info.includes('teachers')) {
               obj.universe = 'Teachers AU';
             } else if (info.includes('armored adventures')) {
-              obj.universe = 'Iron Man: Armored Adventures';
+              obj.universe = 'Armored Adventures';
+            } else if (info.includes('ultimates')) {
+              obj.universe = 'Ultimate';
+            } else if (info.includes('universe - vietnam')) {
+              obj.universe = 'Vietnam AU';
             }
             let tags = $('.tags').eq(0).text().trim().toLowerCase();
             if (tags.includes('sex pollen')) {
@@ -160,6 +203,33 @@ const getData = ids => {
             }
             if (tags.includes('fix-it') || tags.includes('fix it')) {
               obj.tags.push('Fix-It');
+            }
+            if (tags.includes('friends with benefits')) {
+              obj.tags.push('Friends With Benefits');
+            }
+            if (tags.includes('farmhouse of love')) {
+              obj.tags.push('Farmhouse of Love');
+            }
+            if (tags.includes('action') || tags.includes('adventure')) {
+              obj.tags.push('Action/Adventure');
+            }
+            if (tags.includes('hurt/comfort')) {
+              obj.tags.push('Hurt/Comfort');
+            }
+            if (tags.includes('christmas')) {
+              obj.tags.push('Christmas');
+            }
+            if (tags.includes('crossover') || tags.includes('fusion')) {
+              obj.tags.push('Crossover/Fusion');
+            }
+            if (tags.includes('pining')) {
+              obj.tags.push('Pining');
+            }
+            if (tags.includes('misunderstandings')) {
+              obj.tags.push('Misunderstandings');
+            }
+            if (tags.includes('fake relationship') || tags.includes('fake date') || tags.includes('pretended relationship')) {
+              obj.tags.push('Pretended Relationship');
             }
           })
         }

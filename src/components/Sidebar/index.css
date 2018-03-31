@@ -3,6 +3,20 @@
   text-transform: lowercase;
 }
 
+#Sidebar a {
+  text-decoration: none;
+}
+
+#Sidebar h4.panel-title a {
+  color: #332C2C;
+  font-family: "Marcellus SC", serif;
+}
+
+#Sidebar .panel-body a {
+  color: #7D3232;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
 
 /* Spiner, modified version of this one: https://loading.io/css/ */
 .lds-ellipsis {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ao3Fics from './../../data/ao3';
 
 class SelectedFics extends Component {
   constructor() {
@@ -8,54 +9,32 @@ class SelectedFics extends Component {
     }
   }
   componentWillMount() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    let path = window.location.pathname;
+    let toSearch = path.split('/').pop().trim();
+    var fics = [];
+    ao3Fics.map(fic => {
+      if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
+        fics.push(fic);
       }
+      return fics;
     })
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        let path = window.location.pathname;
-        let toSearch = path.split('/').pop().trim();
-        var fics = [];
-        response.map(fic => {
-          if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
-            fics.push(fic);
-          }
-          return fics;
-        })
-        this.setState({
-          data: fics
-        })
-      })
+    this.setState({
+      data: fics
+    })
   }
   componentWillReceiveProps() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    let path = window.location.pathname;
+    let toSearch = path.split('/').pop().trim();
+    var fics = [];
+    ao3Fics.map(fic => {
+      if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
+        fics.push(fic);
       }
+      return fics;
     })
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        let path = window.location.pathname;
-        let toSearch = path.split('/').pop().trim();
-        var fics = [];
-        response.map(fic => {
-          if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
-            fics.push(fic);
-          }
-          return fics;
-        })
-        this.setState({
-          data: fics
-        })
-      })
+    this.setState({
+      data: fics
+    })
   }
   render() {
     return (

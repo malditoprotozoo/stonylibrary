@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ao3Fics from './../../data/ao3';
 
 class AllFics extends Component {
   constructor() {
@@ -8,25 +9,9 @@ class AllFics extends Component {
     }
   }
   componentWillMount() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
+    this.setState({
+      data: ao3Fics
     })
-      .then(response => {
-        return response.json();
-      })
-      .then(response => {
-        let fics = []
-        response.map(fic => {
-          fics.push(fic);
-          return fic;
-        })
-        this.setState({
-          data: fics
-        })
-      })
   }
   render() {
     return (

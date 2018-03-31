@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ao3Fics from './../../data/ao3';
 
 class RatingSelector extends Component {
   constructor() {
@@ -9,26 +10,15 @@ class RatingSelector extends Component {
     }
   }
   componentWillMount() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    let ratings = [];
+    ao3Fics.map(fic => {
+      if (ratings.indexOf(fic.rating) === -1) {
+        ratings.push(fic.rating);
       }
+      return ratings;
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(response => {
-      let rating = [];
-      response.map(fic => {
-        if (rating.indexOf(fic.rating) === -1) {
-          rating.push(fic.rating);
-        }
-        return rating;
-      })
-      this.setState({
-        data: rating
-      })
+    this.setState({
+      data: ratings
     })
   }
   render() {

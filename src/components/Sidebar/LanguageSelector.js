@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ao3Fics from './../../data/ao3';
 
 class LanguageSelector extends Component {
   constructor() {
@@ -9,26 +10,15 @@ class LanguageSelector extends Component {
     }
   }
   componentWillMount() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    let langs = [];
+    ao3Fics.map(fic => {
+      if (langs.indexOf(fic.language) === -1) {
+        langs.push(fic.language);
       }
+      return langs;
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(response => {
-      let langs = [];
-      response.map(fic => {
-        if (langs.indexOf(fic.language) === -1) {
-          langs.push(fic.language);
-        }
-        return langs;
-      })
-      this.setState({
-        data: langs
-      })
+    this.setState({
+      data: langs
     })
   }
   render() {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ao3Fics from './../../data/ao3';
 
 class UniverseSelector extends Component {
   constructor() {
@@ -9,26 +10,15 @@ class UniverseSelector extends Component {
     }
   }
   componentWillMount() {
-    fetch('/data/ao3.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    let unis = [];
+    ao3Fics.map(fic => {
+      if (unis.indexOf(fic.universe) === -1) {
+        unis.push(fic.universe);
       }
+      return unis;
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(response => {
-      let unis = [];
-      response.map(fic => {
-        if (unis.indexOf(fic.universe) === -1) {
-          unis.push(fic.universe);
-        }
-        return unis;
-      })
-      this.setState({
-        data: unis
-      })
+    this.setState({
+      data: unis
     })
   }
   render() {

@@ -2,6 +2,19 @@
   column-count: 3!important;
 }
 
+.card-group .card {
+  min-width: 300px;
+}
+
+.card a {
+  display: block;
+}
+
+.card .author-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+
 .title {
   font-family: "Marcellus SC", serif;
 }

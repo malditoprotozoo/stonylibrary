@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AllFics extends Component {
+class SelectedFics extends Component {
   constructor() {
     super();
     this.state = {
@@ -18,17 +18,43 @@ class AllFics extends Component {
         return response.json();
       })
       .then(response => {
-        let fics = []
+        let path = window.location.pathname;
+        let toSearch = path.split('/').pop().trim();
+        var fics = [];
         response.map(fic => {
-          fics.push(fic);
-          return fic;
+          if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
+            fics.push(fic);
+          }
+          return fics;
         })
         this.setState({
           data: fics
         })
       })
-      .then(() => {
-        console.log(this.state);
+  }
+  componentWillReceiveProps() {
+    fetch('/data/ao3.json', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        let path = window.location.pathname;
+        let toSearch = path.split('/').pop().trim();
+        var fics = [];
+        response.map(fic => {
+          if (fic.language.toLowerCase() === toSearch || fic.rating.toLowerCase().replace(/ /g, '-') === toSearch || fic.universe.toLowerCase().replace(/ /g, '-') === toSearch) {
+            fics.push(fic);
+          }
+          return fics;
+        })
+        this.setState({
+          data: fics
+        })
       })
   }
   render() {
@@ -70,4 +96,4 @@ class AllFics extends Component {
   }
 }
 
-export default AllFics;
+export default SelectedFics;

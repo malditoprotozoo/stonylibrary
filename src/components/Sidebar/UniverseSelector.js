@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class UniverseSelector extends Component {
   constructor() {
@@ -44,7 +45,7 @@ class UniverseSelector extends Component {
               this.state.data.map(item => {
                 return (
                   <div className="panel-body" key={item}>
-                    {item}
+                    <Link to={'/universe/'+ item.toLowerCase().replace(/ /g, '-')}>{item}</Link>
                   </div>
                 );
               })

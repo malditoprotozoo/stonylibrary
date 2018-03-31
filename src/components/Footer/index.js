@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="footer bg-light" id="Footer">
         <div className="container">
-          <span>Made by Tori Rodríguez with  <i class="far fa-heart"></i></span>
+          <span>Developed by Tori Rodríguez with  <i class="far fa-heart"></i></span>
         </div>
       </footer>
     );

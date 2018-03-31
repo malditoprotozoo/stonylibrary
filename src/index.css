@@ -2,9 +2,19 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400');
 
+html {
+  background-color: #F7F5F0;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   overflow-x: hidden;
+}
+
+html,
+body {
+ height: 100%;
+ position: relative;
 }

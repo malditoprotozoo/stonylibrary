@@ -1,0 +1,9 @@
+footer#Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}

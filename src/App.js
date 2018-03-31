@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 // import Err404 from './components/404';
 import Selector from './components/Selector';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/:selector/:tag" component={Selector} />
         </Switch>
+        <Footer/>
       </div>
     );
   }

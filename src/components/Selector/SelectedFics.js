@@ -81,7 +81,7 @@ class SelectedFics extends Component {
                       }
                       </center>
                     </div>
-                    <div class="card-footer">
+                    <div className="card-footer">
                       <a target="_blank" href={'https://archiveofourown.org/works/' + fic.id} className="btn btn-primary">Link</a>
                     </div>
                   </div>

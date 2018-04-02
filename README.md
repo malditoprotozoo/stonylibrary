@@ -1,5 +1,7 @@
 # Stony Library
-## The Project
-Welcome to the Stony Library. This site will contain recommendations of Steve Rogers/Tony Stark fanfics available in any platform.
-## Why 
-The last year, the Stony fandom turned 10 years old. To celebrate, I've decided to create this index of recs.
+Stony Library is a fanfiction recommendation index made using React and a Javascript web scraper to obtain the needed data.
+## Preview
+![Desktop View](https://i.imgur.com/PXA4GRw.png)
+
+## Developed by
+Tori Rodríguez

@@ -2,7 +2,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const firstArr = ['13521117', '855031', '455066', '562493', '726803', '12976434', '13446870', '306021'];
-const secArr = ['399804', '860801', '4861586', '6893602', '6893602', '517893', '3069353', '12694110'];
+const secArr = ['399804', '860801', '4861586', '6893602', '517893', '3069353', '12694110'];
 const ids = firstArr.concat(secArr);
 
 const getData = ids => {
@@ -146,6 +146,9 @@ const getData = ids => {
             obj.summary = $('.summary').eq(0).text().trim();
             obj.rating = $('.rating').eq(0).text();
             obj.language = $('.language').eq(1).text();
+            if (obj.language === 'Español') {
+              obj.language = 'Spanish';
+            }
             obj.words = $('.words').eq(1).text();
             let info = $('.fandoms').eq(0).text().trim().toLowerCase();
             if (info.includes('college')) {
@@ -241,7 +244,7 @@ const getData = ids => {
 
   Promise.all(promises).then((results) => {
     console.log("Results > "+JSON.stringify(results, null, 2));
-    fs.writeFileSync(`ao3.json`, JSON.stringify(results, null, 2));
+    fs.writeFileSync(`dev/ao3.json`, JSON.stringify(results, null, 2));
   }).catch((error) => {
 
   });
